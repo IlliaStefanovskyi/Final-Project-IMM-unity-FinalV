@@ -4,74 +4,74 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float speed = 10;
-    public float turboCoefficient = 1.8f;
-    public float breakCoefficient = 0.5f;
+    public float sidewaysSpeed = 10;
     public float turnSpeed;
 
-    public float maxSteeringAngle = 30f;
+    public float maxWheelTurningAngle = 30f;
+    private float maxCarTurningAngle = 15f;
     public GameObject frontWheelR;
     public GameObject frontWheelL;
     private Vector3 defaultWheelAngle;
+    private Vector3 defaultCarAngle;
+    private Vector3 defaultCarPosition;
 
-    public float fwbkInput;
     public float lrInput;
+
     // Start is called before the first frame update
     void Start()
     {
-        //receives the initial angle of the wheel
+        //receives initil angles for wheels and car and car position
         defaultWheelAngle = frontWheelL.transform.localEulerAngles;
+        defaultCarAngle = transform.localEulerAngles;
+        defaultCarPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*fwbkInput = Input.GetAxis("Vertical");
-
-        //continuouslly going forward
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * -1);
-        //speed increases(turbo)
-        if (fwbkInput > 0)
-        {
-            transform.Translate(Vector3.forward * Time.deltaTime * speed * fwbkInput * turboCoefficient * -1);
-        }
-        //slows down
-        else if (fwbkInput < 0)
-        {
-            transform.Translate(Vector3.forward * Time.deltaTime * speed * fwbkInput * breakCoefficient * -1);
-        }
-        */
         lrInput = Input.GetAxis("Horizontal");
 
-        if (transform.position.x > 137)
+        //keeps the car in place
+        transform.position = new Vector3(defaultCarPosition.x, transform.position.y, transform.position.z);
+
+        //mooves the car left and right in the allowed range of values
+        //turns it to face forward when hits the bound
+        if (transform.position.z > -101 && transform.position.z < -79) {
+            transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed * lrInput);
+        }
+        else
         {
-            Vector3 newPosition = transform.position;
-            newPosition.x = 137;
-            transform.position = newPosition;
+            transform.localEulerAngles = defaultCarAngle;
         }
 
-        transform.Translate(Vector3.left * Time.deltaTime * speed * lrInput);
+        //rotates when input is received
+        //makes it face forward if there is no input
+        if (transform.localEulerAngles.y > defaultCarAngle.y - maxCarTurningAngle 
+            && transform.localEulerAngles.y < defaultCarAngle.y + maxCarTurningAngle) {
+            transform.Rotate(Vector3.up, turnSpeed * lrInput * Time.deltaTime);
+        }
+        if (lrInput == 0)
+        {
+            transform.localEulerAngles = defaultCarAngle;
+        }
 
-        //turns when input is received
-        transform.Rotate(Vector3.up, turnSpeed * lrInput * Time.deltaTime);
-        //front wheels turning when horizontal input received
+        //front wheels turning when input is received
         if (lrInput < 0) //turns left
         {
             frontWheelL.transform.localEulerAngles = 
-                new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxSteeringAngle, defaultWheelAngle.z);
+                new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxWheelTurningAngle, defaultWheelAngle.z);
             frontWheelR.transform.localEulerAngles = 
-                new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxSteeringAngle, defaultWheelAngle.z);
+                new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxWheelTurningAngle, defaultWheelAngle.z);
         }
         else if (lrInput > 0) //turns right
         {
             frontWheelL.transform.localEulerAngles = 
-                new Vector3(defaultWheelAngle.x, defaultWheelAngle.y + maxSteeringAngle, defaultWheelAngle.z);
+                new Vector3(defaultWheelAngle.x, defaultWheelAngle.y + maxWheelTurningAngle, defaultWheelAngle.z);
             frontWheelR.transform.localEulerAngles = 
-                new Vector3(defaultWheelAngle.x, defaultWheelAngle.y + maxSteeringAngle, defaultWheelAngle.z);
+                new Vector3(defaultWheelAngle.x, defaultWheelAngle.y + maxWheelTurningAngle, defaultWheelAngle.z);
         }
         else
-        {
-            // Reset wheels to forward position gradually when no input
+        {//brings wheels back to default angle when no input
             frontWheelL.transform.localEulerAngles = defaultWheelAngle;
             frontWheelR.transform.localEulerAngles = defaultWheelAngle;
         }
