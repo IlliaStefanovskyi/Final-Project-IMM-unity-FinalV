@@ -4,27 +4,34 @@ using UnityEngine;
 
 public class RepeatBackground : MonoBehaviour
 {
-    private Vector3 startPos;
+    private static Vector3 startPos;
     private float repeatLength;
-    public float speed = 5.0f; // Speed at which the road moves towards the car
+    public float speed = 5.0f;
+    private bool isTwo = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        startPos = transform.position; // Save the initial position of the background
-        repeatLength = GetComponent<BoxCollider>().size.x; // Full height of the background
+        startPos = new Vector3(47, 0, -177); 
+        repeatLength = GetComponent<BoxCollider>().size.x; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Move the background downwards to simulate forward motion of the car
+        
         transform.Translate(Vector3.forward * -1 * speed * Time.deltaTime);
 
-        // Check if the background has moved past the repeat length and reset if necessary
-        if (transform.position.x < startPos.x - repeatLength)
+        
+        if (transform.position.x > startPos.x + (repeatLength * 0.5f) && isTwo == false)
         {
-            transform.position = startPos; // Reset to start position for a seamless loop
+            Instantiate(this,new Vector3(startPos.x * 1.5f, startPos.y, startPos.z), this.transform.rotation);
+            isTwo = true;
+        }
+        else if (transform.position.x > startPos.x + (repeatLength))
+        {
+            isTwo = false;
+            GameObject.Destroy(this.gameObject);
         }
     }
 }
