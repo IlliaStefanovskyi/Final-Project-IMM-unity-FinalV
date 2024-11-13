@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.46f1 (8e9b8558c41a) revision 9345925'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'en' Physical Memory: 8091 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16171 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/Hennessy Ice/Desktop/Github Project
+D:/Мої роботи (my works)/A TUD university/1 IMM/Final Project
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-1298
-Successfully changed project path to: C:/Users/Hennessy Ice/Desktop/Github Project
-C:/Users/Hennessy Ice/Desktop/Github Project
+55192
+Successfully changed project path to: D:/Мої роботи (my works)/A TUD university/1 IMM/Final Project
+D:/Мої роботи (my works)/A TUD university/1 IMM/Final Project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,67 +49,71 @@ C:/Users/Hennessy Ice/Desktop/Github Project
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [9236]  Target information:
+Player connection [74600]  Target information:
 
-Player connection [9236]  * "[IP] 10.9.32.55 [Port] 0 [Flags] 2 [Guid] 3976740929 [EditorId] 3976740929 [Version] 1048832 [Id] WindowsEditor(7,Addo-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [74600]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1945818238 [EditorId] 1945818238 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0DCBUQV) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [9236] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [9236] Host joined alternative multi-casting on [225.0.0.222:34997]...
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-Refreshing native plugins compatible for Editor in 76.90 ms, found 3 plugins.
+Player connection [74600]  * "[IP] 10.9.161.149 [Port] 0 [Flags] 2 [Guid] 1945818238 [EditorId] 1945818238 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0DCBUQV) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [74600] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [74600] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Refreshing native plugins compatible for Editor in 4.25 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.46f1 (8e9b8558c41a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Hennessy Ice/Desktop/Github Project/Assets
+[Subsystems] Discovering subsystems at path D:/Мої роботи (my works)/A TUD university/1 IMM/Final Project/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
-    Vendor:   Intel
-    VRAM:     4045 MB
-    Driver:   27.20.100.9664
+    Renderer: NVIDIA GeForce GTX 1650 Ti (ID=0x1f95)
+    Vendor:   NVIDIA
+    VRAM:     3962 MB
+    Driver:   30.0.15.1278
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56304
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56488
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.019352 seconds.
-- Loaded All Assemblies, in  1.553 seconds
+Registered in 0.006017 seconds.
+- Loaded All Assemblies, in  0.344 seconds
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.861 seconds
-Domain Reload Profiling: 2410ms
-	BeginReloadAssembly (571ms)
+- Finished resetting the current domain, in  0.269 seconds
+Domain Reload Profiling: 610ms
+	BeginReloadAssembly (94ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (153ms)
-	RebuildNativeTypeToScriptingClass (47ms)
-	initialDomainReloadingComplete (179ms)
-	LoadAllAssembliesAndSetupDomain (599ms)
-		LoadAssemblies (567ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (148ms)
+		LoadAssemblies (92ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (593ms)
-			TypeCache.Refresh (589ms)
-				TypeCache.ScanAssembly (543ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (862ms)
+		AnalyzeDomain (146ms)
+			TypeCache.Refresh (145ms)
+				TypeCache.ScanAssembly (131ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (269ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (722ms)
+		SetupLoadedEditorAssemblies (221ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (30ms)
-			SetLoadedEditorAssemblies (24ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (9ms)
-			ProcessInitializeOnLoadAttributes (483ms)
-			ProcessInitializeOnLoadMethodAttributes (176ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (158ms)
+			ProcessInitializeOnLoadMethodAttributes (47ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,58 +122,59 @@ Domain Reload Profiling: 2410ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.374 seconds
+- Loaded All Assemblies, in  0.580 seconds
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.080 seconds
-Domain Reload Profiling: 5449ms
-	BeginReloadAssembly (592ms)
+- Finished resetting the current domain, in  0.669 seconds
+Domain Reload Profiling: 1248ms
+	BeginReloadAssembly (143ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (25ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (81ms)
-	RebuildCommonClasses (108ms)
-	RebuildNativeTypeToScriptingClass (36ms)
-	initialDomainReloadingComplete (133ms)
-	LoadAllAssembliesAndSetupDomain (1498ms)
-		LoadAssemblies (1144ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (347ms)
+		LoadAssemblies (240ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (702ms)
-			TypeCache.Refresh (570ms)
-				TypeCache.ScanAssembly (527ms)
-			ScanForSourceGeneratedMonoScriptInfo (83ms)
-			ResolveRequiredComponents (43ms)
-	FinalizeReload (3082ms)
+		AnalyzeDomain (189ms)
+			TypeCache.Refresh (166ms)
+				TypeCache.ScanAssembly (150ms)
+			ScanForSourceGeneratedMonoScriptInfo (15ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (670ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2087ms)
+		SetupLoadedEditorAssemblies (532ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (21ms)
-			SetLoadedEditorAssemblies (9ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (211ms)
-			ProcessInitializeOnLoadAttributes (1738ms)
-			ProcessInitializeOnLoadMethodAttributes (86ms)
-			AfterProcessingInitializeOnLoad (23ms)
+			BeforeProcessingInitializeOnLoad (62ms)
+			ProcessInitializeOnLoadAttributes (431ms)
+			ProcessInitializeOnLoadMethodAttributes (22ms)
+			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (33ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
-Refreshing native plugins compatible for Editor in 12.57 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 2.41 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3285 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 42 unused Assets / (1.3 MB). Loaded Objects now: 3750.
-Memory consumption went from 140.1 MB to 138.7 MB.
-Total: 9.171300 ms (FindLiveObjects: 0.545900 ms CreateObjectMapping: 0.794700 ms MarkObjects: 6.934300 ms  DeleteObjects: 0.894000 ms)
+Memory consumption went from 140.2 MB to 138.9 MB.
+Total: 3.494200 ms (FindLiveObjects: 0.314700 ms CreateObjectMapping: 0.249800 ms MarkObjects: 2.575600 ms  DeleteObjects: 0.353000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
@@ -183,46 +188,182 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 527.545045 seconds.
-  path: Assets/Scenes/Demo_01.unity
-  artifactKey: Guid(e7cef198d2966a84bab9d28c8fb09814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Demo_01.unity using Guid(e7cef198d2966a84bab9d28c8fb09814) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '417f0f49584d9be391b21f2c702356a0') in 0.007311 seconds
+  Time since last request: 2919992.562069 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/LOD/Mountain_L_02_LOD.fbx
+  artifactKey: Guid(63d926f6588f9544ca705c2c572f4202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/LOD/Mountain_L_02_LOD.fbx using Guid(63d926f6588f9544ca705c2c572f4202) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4409c7b2607dea4e5dac84ab424cf507') in 0.164364 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 20
 ========================================================================
 Received Import Request.
-  Time since last request: 55.134235 seconds.
-  path: Assets/BEDRILL/Modular_Track_Free/Prefabs_Obs/Track_Fence_line_type_01_15m_free_obs.prefab
-  artifactKey: Guid(87e0acbd6ddf7814097e377d5a5c716d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BEDRILL/Modular_Track_Free/Prefabs_Obs/Track_Fence_line_type_01_15m_free_obs.prefab using Guid(87e0acbd6ddf7814097e377d5a5c716d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'cccf9aa7b0715ee0e63426973c1022f4') in 0.452454 seconds
+  Time since last request: 0.000097 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/LOD/Mountain_L_06_LOD.fbx
+  artifactKey: Guid(275a750bd829b324ea5435dbe87dea87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/LOD/Mountain_L_06_LOD.fbx using Guid(275a750bd829b324ea5435dbe87dea87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'd4040f6fb05c83e5e7d75886ef2dc8c4') in 0.063967 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
+Number of asset objects unloaded after import = 20
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000102 seconds.
-  path: Assets/BEDRILL/Modular_Track_Free/Prefabs_Obs/Track_Fence_line_type_01_white_block_1&5m_free_obs.prefab
-  artifactKey: Guid(484e95a1def424c4b9f1ad821e0c226a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BEDRILL/Modular_Track_Free/Prefabs_Obs/Track_Fence_line_type_01_white_block_1&5m_free_obs.prefab using Guid(484e95a1def424c4b9f1ad821e0c226a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '291f4ab2db1ff8ef607b798fb679b69d') in 0.055630 seconds
+  Time since last request: 0.000023 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/LOD/Mountain_L_05_LOD.fbx
+  artifactKey: Guid(eb7ef0513fff8f34b8c0889c1ed3ccae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/LOD/Mountain_L_05_LOD.fbx using Guid(eb7ef0513fff8f34b8c0889c1ed3ccae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'e0ee7afa0a2734b22e294507ffb4e3b2') in 0.046482 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
+Number of asset objects unloaded after import = 20
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000946 seconds.
-  path: Assets/BEDRILL/Modular_Track_Free/Prefabs_Obs/Track_line_type_01_15m_free_obs.prefab
-  artifactKey: Guid(1060f28bab45ab94eb490830df68466e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BEDRILL/Modular_Track_Free/Prefabs_Obs/Track_line_type_01_15m_free_obs.prefab using Guid(1060f28bab45ab94eb490830df68466e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '56b3bdc5f87987679e13016e3b66fbda') in 0.046311 seconds
+  Time since last request: 0.000018 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/LOD/Mountain_L_03_LOD.fbx
+  artifactKey: Guid(02f3ba417b7abbc439a9a211fef766e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/LOD/Mountain_L_03_LOD.fbx using Guid(02f3ba417b7abbc439a9a211fef766e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '05250a7e9d94ad91656390ff2a68edef') in 0.051533 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/LOD/Mountain_L_04_LOD.fbx
+  artifactKey: Guid(e129904c71d9f7240a4eb3b456323b03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/LOD/Mountain_L_04_LOD.fbx using Guid(e129904c71d9f7240a4eb3b456323b03) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '51d050ad08bd08f2a92654aecae1335d') in 0.041930 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 2.033971 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/NoLOD/Mountain_L_02.fbx
+  artifactKey: Guid(09f3dc2338bef2149adfb3f049903e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/NoLOD/Mountain_L_02.fbx using Guid(09f3dc2338bef2149adfb3f049903e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '1fcb03e2665744d54dfbbd2e07dde534') in 0.040345 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/NoLOD/Mountain_L_07.fbx
+  artifactKey: Guid(cce9ce54a26ef9045a06bab06e1275c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/NoLOD/Mountain_L_07.fbx using Guid(cce9ce54a26ef9045a06bab06e1275c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2363be48e2a3427228fda3732905d3e5') in 0.020820 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/NoLOD/Mountain_L_08.fbx
+  artifactKey: Guid(707a85eec64a8d940935a0408d3b68c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/NoLOD/Mountain_L_08.fbx using Guid(707a85eec64a8d940935a0408d3b68c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '9b804d7bd1a0b534b3234dd264c54c03') in 0.026457 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/NoLOD/Mountain_L_06.fbx
+  artifactKey: Guid(195d9ac76a06f3641adb7e800f293344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/NoLOD/Mountain_L_06.fbx using Guid(195d9ac76a06f3641adb7e800f293344) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'e4b2dc28979027c275e4095fdb2aa8ac') in 0.028339 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/NoLOD/Mountain_L_10.fbx
+  artifactKey: Guid(b08ff1ca25d6a1e498201852e7bc615a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Mountains/NoLOD/Mountain_L_10.fbx using Guid(b08ff1ca25d6a1e498201852e7bc615a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '8bee6bd3073f851659eb24c4b149a4c5') in 0.029518 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 58.135654 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Terrains/Small Terrains/Small_Terrain_3.fbx
+  artifactKey: Guid(6330758d1f3107243b63ad2cf1ff58ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Terrains/Small Terrains/Small_Terrain_3.fbx using Guid(6330758d1f3107243b63ad2cf1ff58ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '73e2ae60a27e05dcfe19679677a8e7c7') in 0.019238 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Terrains/Small Terrains/Small_Terrain_4.fbx
+  artifactKey: Guid(bdf2f6454652b6944b2a89e04e72ad98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Terrains/Small Terrains/Small_Terrain_4.fbx using Guid(bdf2f6454652b6944b2a89e04e72ad98) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b8b0225cf8ef825f644929f608fb0e74') in 0.021284 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 1.472295 seconds.
+  path: Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Terrains/Terrains/Terrain_3.fbx
+  artifactKey: Guid(83e84af2d4e8e3840abde0ec44897ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQP STUDIOS/Rocks and Terrains Pack - Low Poly/Models/Terrains/Terrains/Terrains/Terrain_3.fbx using Guid(83e84af2d4e8e3840abde0ec44897ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4f0f664fbdcfe8dd557313fc279fee87') in 0.019915 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
 AssetImportWorker is now disconnected from the server
 Process exiting
 Exiting without the bug reporter. Application will terminate with return code 0

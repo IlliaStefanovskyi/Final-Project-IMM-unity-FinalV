@@ -26,8 +26,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fwbkInput = Input.GetAxis("Vertical");
-        lrInput = Input.GetAxis("Horizontal");
+        /*fwbkInput = Input.GetAxis("Vertical");
 
         //continuouslly going forward
         transform.Translate(Vector3.forward * Time.deltaTime * speed * -1);
@@ -41,6 +40,17 @@ public class PlayerControl : MonoBehaviour
         {
             transform.Translate(Vector3.forward * Time.deltaTime * speed * fwbkInput * breakCoefficient * -1);
         }
+        */
+        lrInput = Input.GetAxis("Horizontal");
+
+        if (transform.position.x > 137)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.x = 137;
+            transform.position = newPosition;
+        }
+
+        transform.Translate(Vector3.left * Time.deltaTime * speed * lrInput);
 
         //turns when input is received
         transform.Rotate(Vector3.up, turnSpeed * lrInput * Time.deltaTime);
