@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpwanManager : MonoBehaviour
 {
     public GameObject obstaclePrefab;
-    private Vector3 spwanPos = new Vector3(117,3,-89); 
+    private Vector3 spawnPos = new Vector3(0,3,-89);
 
     private float startDelay = 2.0f;
     private float repeatRate = 2.0f;
@@ -27,9 +27,10 @@ public class SpwanManager : MonoBehaviour
 
     void SpwanObstacle()
     {
+        float randomSpawnZ = Random.Range(-98,-81);
         if (playerControlScript.gameOver == false)
         {
-            Instantiate(obstaclePrefab, spwanPos, obstaclePrefab.transform.rotation);
+            Instantiate(obstaclePrefab, new Vector3(spawnPos.x, spawnPos.y, randomSpawnZ), obstaclePrefab.transform.rotation);
         }
         
     }
