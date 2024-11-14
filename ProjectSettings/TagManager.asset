@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obs
   - Crash
+  - Obstacle
   layers:
   - Default
   - TransparentFX

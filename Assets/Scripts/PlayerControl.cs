@@ -16,11 +16,12 @@ public class PlayerControl : MonoBehaviour
     private Vector3 defaultCarPosition;
 
     public float lrInput;
+    public bool gameOver = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        //receives initil angles for wheels and car and car position
+        //receives initial angles for wheels and car and car position
         defaultWheelAngle = frontWheelL.transform.localEulerAngles;
         defaultCarAngle = transform.localEulerAngles;
         defaultCarPosition = transform.position;
@@ -31,12 +32,12 @@ public class PlayerControl : MonoBehaviour
     {
         lrInput = Input.GetAxis("Horizontal");
 
-        //keeps the car in place
+        // Keeps the car in place on the x-axis
         transform.position = new Vector3(defaultCarPosition.x, transform.position.y, transform.position.z);
 
-        //mooves the car left and right in the allowed range of values
-        //turns it to face forward when hits the bound
-        if (transform.position.z > -101 && transform.position.z < -79) {
+        // Moves the car left and right within an allowed range
+        if (transform.position.z > -101 && transform.position.z < -79)
+        {
             transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed * lrInput);
         }
         else
@@ -44,10 +45,10 @@ public class PlayerControl : MonoBehaviour
             transform.localEulerAngles = defaultCarAngle;
         }
 
-        //rotates when input is received
-        //makes it face forward if there is no input
-        if (transform.localEulerAngles.y > defaultCarAngle.y - maxCarTurningAngle 
-            && transform.localEulerAngles.y < defaultCarAngle.y + maxCarTurningAngle) {
+        // Rotates car when input is received, but resets to face forward if no input
+        if (transform.localEulerAngles.y > defaultCarAngle.y - maxCarTurningAngle
+            && transform.localEulerAngles.y < defaultCarAngle.y + maxCarTurningAngle)
+        {
             transform.Rotate(Vector3.up, turnSpeed * lrInput * Time.deltaTime);
         }
         if (lrInput == 0)
@@ -55,25 +56,35 @@ public class PlayerControl : MonoBehaviour
             transform.localEulerAngles = defaultCarAngle;
         }
 
-        //front wheels turning when input is received
-        if (lrInput < 0) //turns left
+        // Front wheels turning based on input
+        if (lrInput < 0) // Turns left
         {
-            frontWheelL.transform.localEulerAngles = 
+            frontWheelL.transform.localEulerAngles =
                 new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxWheelTurningAngle, defaultWheelAngle.z);
-            frontWheelR.transform.localEulerAngles = 
+            frontWheelR.transform.localEulerAngles =
                 new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxWheelTurningAngle, defaultWheelAngle.z);
         }
-        else if (lrInput > 0) //turns right
+        else if (lrInput > 0) // Turns right
         {
-            frontWheelL.transform.localEulerAngles = 
+            frontWheelL.transform.localEulerAngles =
                 new Vector3(defaultWheelAngle.x, defaultWheelAngle.y + maxWheelTurningAngle, defaultWheelAngle.z);
-            frontWheelR.transform.localEulerAngles = 
+            frontWheelR.transform.localEulerAngles =
                 new Vector3(defaultWheelAngle.x, defaultWheelAngle.y + maxWheelTurningAngle, defaultWheelAngle.z);
         }
         else
-        {//brings wheels back to default angle when no input
+        { // Brings wheels back to default angle when no input
             frontWheelL.transform.localEulerAngles = defaultWheelAngle;
             frontWheelR.transform.localEulerAngles = defaultWheelAngle;
+        }
+    }
+
+    // OnCollisionEnter must be outside of the Update method
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("Game Over!!");
+            gameOver = true;
         }
     }
 }

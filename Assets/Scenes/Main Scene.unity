@@ -684,6 +684,7 @@ MonoBehaviour:
   frontWheelR: {fileID: 656174714}
   frontWheelL: {fileID: 1693753751}
   lrInput: 0
+  gameOver: 0
 --- !u!65 &1119394122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -834,6 +835,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2128361471}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1892888414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892888416}
+  - component: {fileID: 1892888415}
+  m_Layer: 0
+  m_Name: SpwanManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1892888415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892888414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db8580793783eb48805c5c67d640607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefab: {fileID: 5631923106510556633, guid: aa5f60fb5ca2252428d1e2454ee1f209,
+    type: 3}
+--- !u!4 &1892888416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892888414}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 141.3, y: 48.69, z: -90.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1939702474 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 51ef4858cd1949d48b2b7441e33a7a78,
@@ -1136,3 +1183,4 @@ SceneRoots:
   - {fileID: 320571974}
   - {fileID: 712776340}
   - {fileID: 2062168180}
+  - {fileID: 1892888416}
