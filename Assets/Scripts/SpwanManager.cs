@@ -9,10 +9,12 @@ public class SpwanManager : MonoBehaviour
 
     private float startDelay = 2.0f;
     private float repeatRate = 2.0f;
+    private PlayerControl playerControlScript;
     
     // Start is called before the first frame update
     void Start()
     {
+        playerControlScript = GameObject.Find("F1").GetComponent<PlayerControl>();
         InvokeRepeating("SpwanObstacle", startDelay, repeatRate);
     }
 
@@ -25,7 +27,11 @@ public class SpwanManager : MonoBehaviour
 
     void SpwanObstacle()
     {
-        Instantiate(obstaclePrefab,spwanPos,obstaclePrefab.transform.rotation);
+        if (playerControlScript.gameOver == false)
+        {
+            Instantiate(obstaclePrefab, spwanPos, obstaclePrefab.transform.rotation);
+        }
+        
     }
 
 }
