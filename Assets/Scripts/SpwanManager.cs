@@ -6,7 +6,6 @@ public class SpwanManager : MonoBehaviour
 {
     public GameObject obstaclePrefab;
     private Vector3 spawnPos = new Vector3(0,3,-89);
-
     private float startDelay = 2.0f;
     private float repeatRate = 2.0f;
     private PlayerControl playerControlScript;

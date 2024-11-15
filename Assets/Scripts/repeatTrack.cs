@@ -8,17 +8,24 @@ public class RepeatTrack : MonoBehaviour
     private float repeatLength;
     public float speed = 5.0f;
     private bool isTwo = false;
+    private PlayerControl playerContrllerScript;
+
 
     // Start is called before the first frame update
     void Start()
     {
         startPos = new Vector3(-29.7f, 3.3f, -90);
         repeatLength = GetComponent<BoxCollider>().size.x;
+        playerContrllerScript = GameObject.Find("F1").GetComponent<PlayerControl>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (playerContrllerScript.gameOver)
+        {
+            speed = 0;
+        }
 
         transform.Translate(Vector3.forward * -1 * speed * Time.deltaTime);
 
