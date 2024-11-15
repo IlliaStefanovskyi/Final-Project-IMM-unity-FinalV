@@ -18,6 +18,8 @@ public class PlayerControl : MonoBehaviour
     public float lrInput;
     public bool gameOver = false;
 
+    public GameManager gamemanager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,7 +86,9 @@ public class PlayerControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Game Over!!");
-            gameOver = true;
+            gamemanager.gameOver();
+            // Pause the game
+            Time.timeScale = 0;
         }
     }
 }
