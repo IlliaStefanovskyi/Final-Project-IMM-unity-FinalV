@@ -26,7 +26,7 @@ public class MoveBack : MonoBehaviour
             transform.Translate(Vector3.left * -1 * Time.deltaTime * speed);
         }
 
-        if (transform.position.y < backBound && gameObject.CompareTag("Obstacle"))
+        if (transform.position.y < backBound && gameObject.CompareTag("Obstacle") && gameObject.CompareTag("Money"))
 
         {
             Destroy(gameObject);

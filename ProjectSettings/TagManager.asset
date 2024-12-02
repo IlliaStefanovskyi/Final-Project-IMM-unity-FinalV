@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Obs
-  - Crash
   - Obstacle
+  - Money
   layers:
   - Default
   - TransparentFX

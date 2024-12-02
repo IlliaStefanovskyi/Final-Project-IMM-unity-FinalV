@@ -12,6 +12,6 @@ public class GameManager : MonoBehaviour
     public void restart()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Easy");
     }
 }
