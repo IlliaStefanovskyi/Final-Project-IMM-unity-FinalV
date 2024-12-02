@@ -24,7 +24,7 @@ public class Coins : MonoBehaviour
         {
             Debug.Log("Coin");
             coins++;
-            coinText.text = "COIN: " + coins.ToString();
+            coinText.text = "Coins: " + coins;
             Destroy(collision.gameObject);
 
         }

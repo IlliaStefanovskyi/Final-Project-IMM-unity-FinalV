@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpwanManager : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
     public GameObject obstaclePrefab;
-    private Vector3 spawnPos = new Vector3(0, 3, -89);
+    public GameObject coinPrefab;
+    private Vector3 spawnPos = new Vector3(0, 4, -89);
     private float startDelay = 2.0f;
     private float repeatRate = 2.0f;
     private PlayerControl playerControlScript;
@@ -27,9 +28,16 @@ public class SpwanManager : MonoBehaviour
     void SpwanObstacle()
     {
         float randomSpawnZ = Random.Range(-98, -81);
+        float randomObjectSpawn = Random.Range(0,100);
         if (playerControlScript.gameOver == false)
         {
-            Instantiate(obstaclePrefab, new Vector3(spawnPos.x, spawnPos.y, randomSpawnZ), obstaclePrefab.transform.rotation);
+            if (randomObjectSpawn <= 50)
+            {
+                Instantiate(coinPrefab, new Vector3(spawnPos.x, spawnPos.y, randomSpawnZ), coinPrefab.transform.rotation);
+            }
+            else {
+                Instantiate(obstaclePrefab, new Vector3(spawnPos.x, spawnPos.y, randomSpawnZ), obstaclePrefab.transform.rotation);
+            }
         }
 
     }

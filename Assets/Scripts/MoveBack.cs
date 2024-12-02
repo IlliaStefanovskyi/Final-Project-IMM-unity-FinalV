@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MoveBack : MonoBehaviour
 {
-    private float speed = 20.0f;
-    private float backBound = -2.0f;
+    public float speed = 50;
+    private float backBoundy = -2.0f;
+    private float backboundx = 150;
     private PlayerControl playerContrllerScript;
 
     // Start is called before the first frame update
@@ -17,17 +18,17 @@ public class MoveBack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (playerContrllerScript.gameOver)
         {
             speed = 0;
         }
 
-        {
-            transform.Translate(Vector3.left * -1 * Time.deltaTime * speed);
+        else{
+            transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
         }
 
-        if (transform.position.y < backBound && gameObject.CompareTag("Obstacle") && gameObject.CompareTag("Money"))
-
+        if (transform.position.y < backBoundy || transform.position.x > backboundx)
         {
             Destroy(gameObject);
         }

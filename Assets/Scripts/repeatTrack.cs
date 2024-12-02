@@ -6,10 +6,10 @@ public class RepeatTrack : MonoBehaviour
 {
     private static Vector3 startPos;
     private float repeatLength;
-    public float speed = 5.0f;
     private bool isTwo = false;
     private PlayerControl playerContrllerScript;
-
+    private MoveBack speedObject;
+    public float speed = 50;
 
     // Start is called before the first frame update
     void Start()

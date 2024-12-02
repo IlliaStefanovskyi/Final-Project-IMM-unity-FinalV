@@ -6,7 +6,7 @@ public class RepeatBackground : MonoBehaviour
 {
     private static Vector3 startPos;
     private float repeatLength;
-    public float speed = 5.0f;
+    public float speed = 20.0f;
     private bool isTwo = false;
     private PlayerControl playerContrllerScript;
     // Start is called before the first frame update

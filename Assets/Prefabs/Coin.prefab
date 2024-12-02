@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 1695935216419741750}
   - component: {fileID: 3489686431026566396}
   - component: {fileID: 7060238016885731256}
-  - component: {fileID: 192343412344722787}
-  - component: {fileID: 7885995274816446748}
+  - component: {fileID: 4330136173373376858}
+  - component: {fileID: 1474214441013852689}
+  - component: {fileID: 3326063279149660136}
   m_Layer: 0
-  m_Name: PirateCoin
+  m_Name: Coin
   m_TagString: Money
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3129200342344496425}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.48662874, y: 0.45286706, z: -0.42647403, w: 0.61337084}
-  m_LocalPosition: {x: -0.71, y: 0.46, z: 0.00000001180846}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.64755625, y: -0.052180164, z: -0.009825217, w: 0.76016545}
+  m_LocalPosition: {x: 66.723, y: 4.7022, z: -89.873}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 79.495, y: 50.402, z: -26.876}
+  m_LocalEulerAnglesHint: {x: 79.569, y: -30.562, z: -27.115}
 --- !u!33 &1695935216419741750
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -105,9 +106,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.6399999, y: 0.68962437, z: 2.5998929}
-  m_Center: {x: -7.7930307e-10, y: 0.124811515, z: -3.8929282e-10}
---- !u!54 &192343412344722787
+  m_Size: {x: 2.6399999, y: 0.8187223, z: 3.193107}
+  m_Center: {x: -5.6210936e-10, y: 0.060262606, z: 0.30887312}
+--- !u!54 &4330136173373376858
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,11 +131,24 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7885995274816446748
+--- !u!114 &1474214441013852689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129200342344496425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eceee2730420d0745b923f7be2156702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: 400
+--- !u!114 &3326063279149660136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,3 +160,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4bfe2ad7cd0355449dce0933a3d619d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 50
