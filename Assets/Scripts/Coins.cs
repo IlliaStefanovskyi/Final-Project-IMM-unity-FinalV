@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,10 +7,13 @@ public class Coins : MonoBehaviour
 {
     public int coins = 0;
     public TextMeshProUGUI coinText;
+
+    private AudioSource playerAudio;
+    public AudioClip moneySound;
     // Start is called before the first frame update
     void Start()
     {
-
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,11 +25,20 @@ public class Coins : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Money"))
         {
-            Debug.Log("Coin");
+            if (moneySound != null)
+            {
+                playerAudio.PlayOneShot(moneySound, 1.0f);
+            }
+            else
+            {
+                Debug.LogWarning("Money Sound is not assigned in the Inspector!");
+            }
+
             coins++;
             coinText.text = "Coins: " + coins;
             Destroy(collision.gameObject);
-
         }
     }
+
 }
+*/

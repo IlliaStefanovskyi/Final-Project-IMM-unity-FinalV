@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
@@ -18,6 +19,13 @@ public class PlayerControl : MonoBehaviour
     public float lrInput;
     public bool gameOver = false;
 
+    public int coins = 0;
+    public TextMeshProUGUI coinText;
+
+    private AudioSource playerAudio;
+    public AudioClip moneySound;
+    public AudioClip crash;
+
     public GameManager gamemanager;
 
     // Start is called before the first frame update
@@ -27,6 +35,8 @@ public class PlayerControl : MonoBehaviour
         defaultWheelAngle = frontWheelL.transform.localEulerAngles;
         defaultCarAngle = transform.localEulerAngles;
         defaultCarPosition = transform.position;
+
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -87,10 +97,19 @@ public class PlayerControl : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
+            playerAudio.PlayOneShot(crash, 1.0f);
             Debug.Log("Game Over!!");
             gamemanager.gameOver();
             // Pause the game
             Time.timeScale = 0;
+        }
+
+        if (collision.gameObject.CompareTag("Money"))
+        {
+            playerAudio.PlayOneShot(moneySound, 1.0f);
+            coins++;
+            coinText.text = "Coins: " + coins;
+            Destroy(collision.gameObject);
         }
     }
 }

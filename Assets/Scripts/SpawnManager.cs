@@ -2,44 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class SpawnableObject
+{
+    public GameObject prefab; // The object to spawn
+    public float startDelay = 2.0f; // Delay before the first spawn
+    public float repeatRate = 2.0f; // Spawn interval
+}
+
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject obstaclePrefab;
-    public GameObject coinPrefab;
+    public List<SpawnableObject> spawnableObjects = new List<SpawnableObject>();
     private Vector3 spawnPos = new Vector3(0, 4, -89);
-    private float startDelay = 2.0f;
-    private float repeatRate = 2.0f;
     private PlayerControl playerControlScript;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerControlScript = GameObject.Find("F1").GetComponent<PlayerControl>();
-        InvokeRepeating("SpwanObstacle", startDelay, repeatRate);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
-    void SpwanObstacle()
-    {
-        float randomSpawnZ = Random.Range(-98, -81);
-        float randomObjectSpawn = Random.Range(0,100);
-        if (playerControlScript.gameOver == false)
+        foreach (var spawnable in spawnableObjects)
         {
-            if (randomObjectSpawn <= 50)
-            {
-                Instantiate(coinPrefab, new Vector3(spawnPos.x, spawnPos.y, randomSpawnZ), coinPrefab.transform.rotation);
-            }
-            else {
-                Instantiate(obstaclePrefab, new Vector3(spawnPos.x, spawnPos.y, randomSpawnZ), obstaclePrefab.transform.rotation);
-            }
+            StartCoroutine(SpawnRoutine(spawnable));
         }
+    }
 
+    IEnumerator SpawnRoutine(SpawnableObject spawnable)
+    {
+        yield return new WaitForSeconds(spawnable.startDelay);
+
+        while (!playerControlScript.gameOver)
+        {
+            float randomSpawnZ = Random.Range(-98, -81); // Adjust Z spawn position
+            float randomOffset = Random.Range(-0.5f, 0.5f); // Small time offset
+            Instantiate(spawnable.prefab, new Vector3(spawnPos.x, spawnPos.y, randomSpawnZ), spawnable.prefab.transform.rotation);
+            yield return new WaitForSeconds(spawnable.repeatRate + randomOffset);
+        }
     }
 
 }

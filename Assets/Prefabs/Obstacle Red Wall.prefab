@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 142077694255516796}
   - component: {fileID: 1798919331236655131}
   m_Layer: 0
-  m_Name: Obstacle
+  m_Name: Obstacle Red Wall
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
