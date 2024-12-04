@@ -13,7 +13,7 @@ public class SpawnableObject
 public class SpawnManager : MonoBehaviour
 {
     public List<SpawnableObject> spawnableObjects = new List<SpawnableObject>();
-    private Vector3 spawnPos = new Vector3(0, 4, -89);
+    private Vector3 spawnPos = new Vector3(0, 5, -89);
     private PlayerControl playerControlScript;
 
     void Start()
@@ -32,8 +32,8 @@ public class SpawnManager : MonoBehaviour
 
         while (!playerControlScript.gameOver)
         {
-            float randomSpawnZ = Random.Range(-98, -81); // Adjust Z spawn position
-            float randomOffset = Random.Range(-0.5f, 0.5f); // Small time offset
+            float randomSpawnZ = Random.Range(-98, -81); // adjust z spawn position
+            float randomOffset = Random.Range(-1f, 1f); // small time offset
             Instantiate(spawnable.prefab, new Vector3(spawnPos.x, spawnPos.y, randomSpawnZ), spawnable.prefab.transform.rotation);
             yield return new WaitForSeconds(spawnable.repeatRate + randomOffset);
         }

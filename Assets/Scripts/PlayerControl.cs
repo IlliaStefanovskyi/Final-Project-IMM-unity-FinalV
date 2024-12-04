@@ -16,15 +16,17 @@ public class PlayerControl : MonoBehaviour
     private Vector3 defaultCarAngle;
     private Vector3 defaultCarPosition;
 
-    public float lrInput;
+    private float lrInput;
     public bool gameOver = false;
 
-    public int coins = 0;
+    private int coins = 0;
     public TextMeshProUGUI coinText;
 
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip crash;
+    public AudioClip turningSound;
+    public AudioClip engineSound;
 
     public GameManager gamemanager;
 
@@ -37,6 +39,7 @@ public class PlayerControl : MonoBehaviour
         defaultCarPosition = transform.position;
 
         playerAudio = GetComponent<AudioSource>();
+        StartCoroutine(RepeatSound(engineSound));
     }
 
     // Update is called once per frame
@@ -76,6 +79,7 @@ public class PlayerControl : MonoBehaviour
                     new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxWheelTurningAngle, defaultWheelAngle.z);
                 frontWheelR.transform.localEulerAngles =
                     new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxWheelTurningAngle, defaultWheelAngle.z);
+                playerAudio.PlayOneShot(turningSound, .02f);
             }
             else if (lrInput > 0) // Turns right
             {
@@ -83,11 +87,13 @@ public class PlayerControl : MonoBehaviour
                     new Vector3(defaultWheelAngle.x, defaultWheelAngle.y + maxWheelTurningAngle, defaultWheelAngle.z);
                 frontWheelR.transform.localEulerAngles =
                     new Vector3(defaultWheelAngle.x, defaultWheelAngle.y + maxWheelTurningAngle, defaultWheelAngle.z);
+                playerAudio.PlayOneShot(turningSound, .02f);
             }
             else
             { // Brings wheels back to default angle when no input
                 frontWheelL.transform.localEulerAngles = defaultWheelAngle;
                 frontWheelR.transform.localEulerAngles = defaultWheelAngle;
+                StopCoroutine(RepeatSound(engineSound));
             }
         }
     }
@@ -110,6 +116,14 @@ public class PlayerControl : MonoBehaviour
             coins++;
             coinText.text = "Coins: " + coins;
             Destroy(collision.gameObject);
+        }
+    }
+    IEnumerator RepeatSound(AudioClip clip)
+    {
+        while (true)
+        {
+            playerAudio.PlayOneShot(clip);
+            yield return new WaitForSeconds(clip.length);
         }
     }
 }

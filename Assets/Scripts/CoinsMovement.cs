@@ -15,11 +15,13 @@ public class CoinsMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Keeps coin in place on z and y axis
-        transform.position = new Vector3(transform.position.x, startPos.y, startPos.z);
-
         //spins coin in y axis
         transform.Rotate(Vector3.forward, spinSpeed * Time.deltaTime);
+
+        //Keeps coin in place on z and y axis
+        if (transform.position.y < startPos.y - 1 || transform.position.y > startPos.y + 1) {
+            transform.position = new Vector3(transform.position.x, startPos.y, transform.position.z);
+        }
     }
 }
 
