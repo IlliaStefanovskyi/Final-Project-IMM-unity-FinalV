@@ -9,3 +9,7 @@ All scenes in "Scenes" folder and scripts in "Scripts" folder were created on ou
 #SOUNDS
 engineSound - https://pixabay.com/sound-effects/car-acceleration-inside-car-7087/
 turningSound - https://pixabay.com/sound-effects/search/burn%20rubber/
+bumpingToBorderSound - https://www.myinstants.com/en/instant/jixaw-metal-pipe-falling-sound-28270/
+
+#PARTICLES
+particle systems - https://assetstore.unity.com/packages/vfx/particles/simple-fx-cartoon-particles-67834

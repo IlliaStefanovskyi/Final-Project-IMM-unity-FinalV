@@ -27,6 +27,11 @@ public class PlayerControl : MonoBehaviour
     public AudioClip crash;
     public AudioClip turningSound;
     public AudioClip engineSound;
+    public AudioClip borderBumpingSound;
+
+    public ParticleSystem Explosion;
+    public ParticleSystem Fire;
+    public ParticleSystem CaughtCoin;
 
     public GameManager gamemanager;
 
@@ -48,10 +53,10 @@ public class PlayerControl : MonoBehaviour
         lrInput = Input.GetAxis("Horizontal");
 
         if (!gameOver) {
-            // Keeps the car in place on the x-axis
+            //keeps the car in place on the x-axis
             transform.position = new Vector3(defaultCarPosition.x, transform.position.y, transform.position.z);
 
-            // Moves the car left and right within an allowed range
+            //moves the car left and right within an allowed range
             if (transform.position.z > -101 && transform.position.z < -79)
             {
                 transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed * lrInput);
@@ -59,9 +64,10 @@ public class PlayerControl : MonoBehaviour
             else
             {
                 transform.localEulerAngles = defaultCarAngle;
+                playerAudio.PlayOneShot(borderBumpingSound, 0.03f);
             }
 
-            // Rotates car when input is received, but resets to face forward if no input
+            //rotates car when input is received, but resets to face forward if no input
             if (transform.localEulerAngles.y > defaultCarAngle.y - maxCarTurningAngle
                 && transform.localEulerAngles.y < defaultCarAngle.y + maxCarTurningAngle)
             {
@@ -72,8 +78,8 @@ public class PlayerControl : MonoBehaviour
                 transform.localEulerAngles = defaultCarAngle;
             }
 
-            // Front wheels turning based on input
-            if (lrInput < 0) // Turns left
+            //front wheels turning based on input
+            if (lrInput < 0) //turns left
             {
                 frontWheelL.transform.localEulerAngles =
                     new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxWheelTurningAngle, defaultWheelAngle.z);
@@ -81,7 +87,7 @@ public class PlayerControl : MonoBehaviour
                     new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxWheelTurningAngle, defaultWheelAngle.z);
                 playerAudio.PlayOneShot(turningSound, .02f);
             }
-            else if (lrInput > 0) // Turns right
+            else if (lrInput > 0) //turns right
             {
                 frontWheelL.transform.localEulerAngles =
                     new Vector3(defaultWheelAngle.x, defaultWheelAngle.y + maxWheelTurningAngle, defaultWheelAngle.z);
@@ -90,28 +96,37 @@ public class PlayerControl : MonoBehaviour
                 playerAudio.PlayOneShot(turningSound, .02f);
             }
             else
-            { // Brings wheels back to default angle when no input
+            { //brings wheels back to default angle when no input
                 frontWheelL.transform.localEulerAngles = defaultWheelAngle;
                 frontWheelR.transform.localEulerAngles = defaultWheelAngle;
                 StopCoroutine(RepeatSound(engineSound));
             }
         }
+        if (gameOver)
+        {
+            //Explosion particle system gets detached from time to make it run even after Time.timeScale = 0;
+            Explosion.Simulate(Time.unscaledDeltaTime, true, false);
+            Fire.Simulate(Time.unscaledDeltaTime, true, false);
+        }
     }
 
-    // OnCollisionEnter must be outside of the Update method
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
+            gameOver = true;
+            Explosion.Play();
+            Fire.Play();
             playerAudio.PlayOneShot(crash, 1.0f);
             Debug.Log("Game Over!!");
             gamemanager.gameOver();
-            // Pause the game
+            //Stop the time
             Time.timeScale = 0;
         }
 
         if (collision.gameObject.CompareTag("Money"))
         {
+            CaughtCoin.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
             coins++;
             coinText.text = "Coins: " + coins;
