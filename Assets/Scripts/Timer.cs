@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
         {
             timeRemaning -= Time.deltaTime;
         }
-        else if (timeRemaning < 0) 
+        else if (timeRemaning < 10) 
         {
             timeRemaning = 0;
             gamemanager.gameOver();
