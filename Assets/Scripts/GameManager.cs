@@ -9,9 +9,27 @@ public class GameManager : MonoBehaviour
     public void gameOver()
     {  gameOverPanel.SetActive(true); }
 
-    public void restart()
+    public void Easy()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("Easy");
+    }
+
+    public void Medium()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Medium");
+    }
+
+    public void Hard()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Hard");
+    }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Main Menu");
     }
 }

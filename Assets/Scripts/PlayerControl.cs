@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -21,7 +22,9 @@ public class PlayerControl : MonoBehaviour
 
     bool CrashPlayed;
     private int coins = 0;
+    public int coinsToNextLevel = 10;
     public TextMeshProUGUI coinText;
+    public GameObject nextLevelPanel;
 
     private AudioSource playerAudio;
     public AudioClip moneySound;
@@ -163,8 +166,14 @@ void Update()
             CaughtCoin.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
             coins++;
-            coinText.text = "Coins: " + coins;
+            coinText.text = "Coins: " + coins + " / 10";
             Destroy(collision.gameObject);
+
+            if (coins >= coinsToNextLevel)
+            {
+                Time.timeScale = 0;
+                nextLevelPanel.SetActive(true);
+            }
         }
     }
     IEnumerator RepeatSound(AudioClip clip)
