@@ -19,6 +19,7 @@ public class PlayerControl : MonoBehaviour
     private float lrInput;
     public bool gameOver = false;
 
+    bool CrashPlayed;
     private int coins = 0;
     public TextMeshProUGUI coinText;
 
@@ -28,10 +29,15 @@ public class PlayerControl : MonoBehaviour
     public AudioClip turningSound;
     public AudioClip engineSound;
     public AudioClip borderBumpingSound;
+    public AudioClip GameStart;
 
     public ParticleSystem Explosion;
     public ParticleSystem Fire;
     public ParticleSystem CaughtCoin;
+    public ParticleSystem LeftWheelSmoke;
+    public ParticleSystem RightWheelSmoke;
+    public ParticleSystem LeftBorderContact;
+    public ParticleSystem RightBorderContact;
 
     public GameManager gamemanager;
 
@@ -45,10 +51,15 @@ public class PlayerControl : MonoBehaviour
 
         playerAudio = GetComponent<AudioSource>();
         StartCoroutine(RepeatSound(engineSound));
+
+        CrashPlayed = false;
+
+        playerAudio.PlayOneShot(GameStart, 1f);
+
     }
 
-    // Update is called once per frame
-    void Update()
+// Update is called once per frame
+void Update()
     {
         lrInput = Input.GetAxis("Horizontal");
 
@@ -63,6 +74,14 @@ public class PlayerControl : MonoBehaviour
             }
             else
             {
+                if (transform.position.z < -101)
+                {
+                    LeftBorderContact.Play();
+                }
+                else
+                {
+                    RightBorderContact.Play();
+                }
                 transform.localEulerAngles = defaultCarAngle;
                 playerAudio.PlayOneShot(borderBumpingSound, 0.03f);
             }
@@ -86,6 +105,8 @@ public class PlayerControl : MonoBehaviour
                 frontWheelR.transform.localEulerAngles =
                     new Vector3(defaultWheelAngle.x, defaultWheelAngle.y - maxWheelTurningAngle, defaultWheelAngle.z);
                 playerAudio.PlayOneShot(turningSound, .02f);
+                LeftWheelSmoke.Play();
+                RightWheelSmoke.Play();
             }
             else if (lrInput > 0) //turns right
             {
@@ -94,6 +115,8 @@ public class PlayerControl : MonoBehaviour
                 frontWheelR.transform.localEulerAngles =
                     new Vector3(defaultWheelAngle.x, defaultWheelAngle.y + maxWheelTurningAngle, defaultWheelAngle.z);
                 playerAudio.PlayOneShot(turningSound, .02f);
+                LeftWheelSmoke.Play();
+                RightWheelSmoke.Play();
             }
             else
             { //brings wheels back to default angle when no input
@@ -107,6 +130,17 @@ public class PlayerControl : MonoBehaviour
             //Explosion particle system gets detached from time to make it run even after Time.timeScale = 0;
             Explosion.Simulate(Time.unscaledDeltaTime, true, false);
             Fire.Simulate(Time.unscaledDeltaTime, true, false);
+            LeftWheelSmoke.Simulate(Time.unscaledDeltaTime, true, false);
+            RightWheelSmoke.Simulate(Time.unscaledDeltaTime, true, false);
+            LeftBorderContact.Simulate(Time.unscaledDeltaTime, true, false);
+            RightBorderContact.Simulate(Time.unscaledDeltaTime, true, false);
+
+            //stops the sound
+            if (!CrashPlayed) {
+                playerAudio.Stop();
+                playerAudio.PlayOneShot(crash, 1.0f);
+                CrashPlayed = true;
+            }
         }
     }
 
