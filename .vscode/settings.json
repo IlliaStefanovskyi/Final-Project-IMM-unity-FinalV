@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Github Project.sln"
+    "dotnet.defaultSolution": "Final-Project-IMM-unity-FinalV.sln"
 }
