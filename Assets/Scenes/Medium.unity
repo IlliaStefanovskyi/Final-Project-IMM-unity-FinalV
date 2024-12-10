@@ -460,7 +460,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1651205756}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Easy
+        m_MethodName: Medium
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2918,7 +2918,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1651205756}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Medium
+        m_MethodName: Hard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3508,7 +3508,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1651205756}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Easy
+        m_MethodName: Medium
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

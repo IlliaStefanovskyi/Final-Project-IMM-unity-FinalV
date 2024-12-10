@@ -179,9 +179,10 @@ GameObject:
   - component: {fileID: 8581432774962224764}
   - component: {fileID: 4950076513942032357}
   - component: {fileID: 3252520523535964808}
+  - component: {fileID: 800393045666893754}
   m_Layer: 0
   m_Name: Police
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,9 +195,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2398187089556533302}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7491996, z: -0, w: 0.66234434}
+  m_LocalRotation: {x: 0, y: -0.74919844, z: 0, w: 0.6623456}
   m_LocalPosition: {x: 21.6, y: 4.1, z: -89.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.9104, y: 1, z: 3.9583}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6510693359899468740}
@@ -304,6 +305,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &800393045666893754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398187089556533302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bfe2ad7cd0355449dce0933a3d619d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
 --- !u!1 &3153225354739423418
 GameObject:
   m_ObjectHideFlags: 0

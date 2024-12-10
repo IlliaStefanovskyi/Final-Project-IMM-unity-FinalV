@@ -27,6 +27,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Hard");
     }
 
+    public void Victory()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Victory");
+    }
+
     public void MainMenu()
     {
         Time.timeScale = 1;
