@@ -2486,7 +2486,7 @@ MonoBehaviour:
   frontWheelR: {fileID: 656174714}
   frontWheelL: {fileID: 1693753751}
   gameOver: 0
-  coinsToNextLevel: 5
+  coinsToNextLevel: 10
   coinText: {fileID: 1768709546}
   nextLevelPanel: {fileID: 1921620124}
   moneySound: {fileID: 8300000, guid: ccb9b31174a3a43709a113a9c7cf4252, type: 3}
@@ -3796,7 +3796,7 @@ GameObject:
   - component: {fileID: 1869639883}
   - component: {fileID: 1869639882}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Congrats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3809,16 +3809,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869639880}
-  m_LocalRotation: {x: -0, y: -0, z: -0.34825155, w: 0.9374011}
+  m_LocalRotation: {x: -0, y: -0, z: -0.41095892, w: 0.91165394}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1921620125}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40.761}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -48.53}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 238.2, y: 103.6}
+  m_AnchoredPosition: {x: 265, y: 127}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869639882
@@ -3841,7 +3841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulations, you won!
+  m_text: Congratulations, you passed medium level!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -4186,7 +4186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b38bbcd6397bed40a6abb913c5ead5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 90
+  speed: 80
 --- !u!65 &1939702479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4546,7 +4546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca516899df497b498fc35bc74f1cf45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 90
+  speed: 80
 --- !u!65 &2033492749
 BoxCollider:
   m_ObjectHideFlags: 0

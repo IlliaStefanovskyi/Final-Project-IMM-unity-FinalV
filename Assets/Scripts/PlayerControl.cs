@@ -19,6 +19,7 @@ public class PlayerControl : MonoBehaviour
 
     private float lrInput;
     public bool gameOver = false;
+    bool gameFinishedSoundPlayed = false;
 
     bool CrashPlayed;
     private int coins = 0;
@@ -154,11 +155,18 @@ void Update()
             gameOver = true;
             Explosion.Play();
             Fire.Play();
-            playerAudio.PlayOneShot(crash, 1.0f);
             Debug.Log("Game Over!!");
             gamemanager.gameOver();
             //Stop the time
             Time.timeScale = 0;
+            //this is to stop the all the game sounds and play
+            //only the sound that indicated that game has finished
+            if (!gameFinishedSoundPlayed)
+            {
+                playerAudio.Stop();
+                playerAudio.PlayOneShot(crash, 1.0f);
+                gameFinishedSoundPlayed = true;
+            }
         }
 
         if (collision.gameObject.CompareTag("Money"))
@@ -173,6 +181,13 @@ void Update()
             {
                 Time.timeScale = 0;
                 nextLevelPanel.SetActive(true);
+                //this is to stop the all the game sounds and play
+                //only the sound that indicated that game has finished
+                if (!gameFinishedSoundPlayed) {
+                    playerAudio.Stop();
+                    playerAudio.PlayOneShot(moneySound, 1.0f);
+                    gameFinishedSoundPlayed = true;
+                }
             }
         }
     }
