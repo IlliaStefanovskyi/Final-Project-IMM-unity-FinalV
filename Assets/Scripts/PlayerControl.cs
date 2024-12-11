@@ -81,14 +81,17 @@ void Update()
                 if (transform.position.z < -101)
                 {
                     LeftBorderContact.Play();
+                    transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed * 1);
                 }
                 else
                 {
                     RightBorderContact.Play();
+                    transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed * -1);
                 }
                 transform.localEulerAngles = defaultCarAngle;
                 playerAudio.PlayOneShot(borderBumpingSound, 0.03f);
             }
+
 
             //rotates car when input is received, but resets to face forward if no input
             if (transform.localEulerAngles.y > defaultCarAngle.y - maxCarTurningAngle
