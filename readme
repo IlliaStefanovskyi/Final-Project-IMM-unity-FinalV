@@ -1,10 +1,14 @@
 This is a readme file of the final project on Interactive Multimedia module, it contains resources and brief description of the project.
 
-We imported three packeges from unity store. From those packeges we only used 3D models. 
+We imported all packeges from unity store. From those packeges we only used 3D models. 
 All scenes in "Scenes" folder and scripts in "Scripts" folder were created on our own.
+
+(CAR - F1) https://assetstore.unity.com/packages/3d/vehicles/land/formula-one-car-25693 
 (MAP - HQP STUDIOS) https://assetstore.unity.com/packages/3d/environments/rocks-and-terrains-pack-low-poly-281733 
 (ROADS - BEDRILL) https://assetstore.unity.com/packages/3d/environments/roadways/modular-lowpoly-track-roads-free-205188 
-(CAR - F1) https://assetstore.unity.com/packages/3d/vehicles/land/formula-one-car-25693 
+(BACKGROUND OBJECTS) https://assetstore.unity.com/packages/3d/props/environment-track-lowpoly-cartoon-props-mobile-free-211494#content
+(BUTTONS ICONS) https://nectanebo.itch.io/menu-buttons
+(COINS) https://assetstore.unity.com/packages/3d/props/pirate-coin-207743
 
 #SOUNDS
 game start sound - https://pixabay.com/sound-effects/game-start-6104/
@@ -14,3 +18,8 @@ bumpingToBorderSound - https://www.myinstants.com/en/instant/jixaw-metal-pipe-fa
 
 #PARTICLES
 particle systems - https://assetstore.unity.com/packages/vfx/particles/simple-fx-cartoon-particles-67834
+
+#IMAGES
+menu background - https://www.facebook.com/groups/222133265715327/
+victory background - https://shared.steamstatic.com/store_item_assets/steam/apps/264120/header.jpg?t=1732934434
+timer - https://www.freeiconspng.com/thumbs/timer-icon/timer-icon-15.png
